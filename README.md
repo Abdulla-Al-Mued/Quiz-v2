@@ -56,6 +56,6 @@ answers
 4. Leaderboard Screen
 ○ Show top scores (player name + score)
 ○ Sort by highest score first
-○ Persistent storage (Hive/Isar/SQLite — your choice)
+○ Persistent storage (Hive)
 
 Everything Is implemented except ci/cd, unit test and night mode

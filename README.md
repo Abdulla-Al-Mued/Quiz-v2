@@ -1,7 +1,8 @@
-### Data Storage
+### Data Storage and state management
 - Questions stored in `assets/questions.json`
 - Scores persisted locally using Hive database
 - Automatic data migration and type-safe storage
+- getx state management
 
 ## Getting Started
 
@@ -31,5 +32,30 @@
    ```bash
    flutter run
    ```
+
+Core Features (MVP)
+1. Home Screen
+○ App title + “Start Quiz” button
+○ “Leaderboard” button
+
+2. Quiz Flow
+○ Load questions from assets/questions.json
+○ Support rendering of LaTeX/Math equations in both questions and
+answers
+○ Show 1 question at a time with 4 multiple‐choice answers
+○ User taps to select an answer (lock once selected)
+
+○ “Next” button to move to the next question
+○ Progress indicator (e.g., Q2/10)
+3. Results Screen
+
+○ Final score out of total
+
+○ Option to enter player name
+○ Save score to local leaderboard
+4. Leaderboard Screen
+○ Show top scores (player name + score)
+○ Sort by highest score first
+○ Persistent storage (Hive/Isar/SQLite — your choice)
 
 Everything Is implemented except ci/cd, unit test and night mode

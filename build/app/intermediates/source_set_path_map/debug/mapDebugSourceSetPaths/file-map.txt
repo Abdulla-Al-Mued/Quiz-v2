@@ -1,0 +1,28 @@
+com.example.quiz.app-jetified-profileinstaller-1.3.1-0 C:\Users\HP\.gradle\caches\8.11.1\transforms\06d34f3f7c29953ba5cd9bbe1e248601\transformed\jetified-profileinstaller-1.3.1\res
+com.example.quiz.app-core-runtime-2.2.0-1 C:\Users\HP\.gradle\caches\8.11.1\transforms\0a5c1b1214b3610dbeb31e680f6dd099\transformed\core-runtime-2.2.0\res
+com.example.quiz.app-jetified-lifecycle-livedata-core-ktx-2.7.0-2 C:\Users\HP\.gradle\caches\8.11.1\transforms\11c8eab57d2d0f7b5d00a6ae8a89c35e\transformed\jetified-lifecycle-livedata-core-ktx-2.7.0\res
+com.example.quiz.app-jetified-window-java-1.2.0-3 C:\Users\HP\.gradle\caches\8.11.1\transforms\1c4802024e29f9ab048f7feb91eb9e22\transformed\jetified-window-java-1.2.0\res
+com.example.quiz.app-jetified-annotation-experimental-1.4.0-4 C:\Users\HP\.gradle\caches\8.11.1\transforms\3a78f4131f95d773f4689df5789d331e\transformed\jetified-annotation-experimental-1.4.0\res
+com.example.quiz.app-jetified-savedstate-1.2.1-5 C:\Users\HP\.gradle\caches\8.11.1\transforms\46e543084614f57ce87a496f66ce94be\transformed\jetified-savedstate-1.2.1\res
+com.example.quiz.app-lifecycle-livedata-core-2.7.0-6 C:\Users\HP\.gradle\caches\8.11.1\transforms\50151b4dc4b533259d67b874cd799571\transformed\lifecycle-livedata-core-2.7.0\res
+com.example.quiz.app-jetified-activity-1.8.1-7 C:\Users\HP\.gradle\caches\8.11.1\transforms\52aa5e0f889592f42ea238f33a1c51ff\transformed\jetified-activity-1.8.1\res
+com.example.quiz.app-jetified-lifecycle-viewmodel-savedstate-2.7.0-8 C:\Users\HP\.gradle\caches\8.11.1\transforms\6269e10dbb8bae110f82716abe172163\transformed\jetified-lifecycle-viewmodel-savedstate-2.7.0\res
+com.example.quiz.app-lifecycle-livedata-2.7.0-9 C:\Users\HP\.gradle\caches\8.11.1\transforms\66218335ef42f848f878edea4eb25c40\transformed\lifecycle-livedata-2.7.0\res
+com.example.quiz.app-lifecycle-viewmodel-2.7.0-10 C:\Users\HP\.gradle\caches\8.11.1\transforms\662429d0113da42c4b7bfb49627bd9bc\transformed\lifecycle-viewmodel-2.7.0\res
+com.example.quiz.app-jetified-lifecycle-process-2.7.0-11 C:\Users\HP\.gradle\caches\8.11.1\transforms\6d5b595b6b9e5ef9f7b0ab391bcf14ba\transformed\jetified-lifecycle-process-2.7.0\res
+com.example.quiz.app-lifecycle-runtime-2.7.0-12 C:\Users\HP\.gradle\caches\8.11.1\transforms\714c218dbaf45f7d4c8ba516b0eb47b9\transformed\lifecycle-runtime-2.7.0\res
+com.example.quiz.app-fragment-1.7.1-13 C:\Users\HP\.gradle\caches\8.11.1\transforms\8ae2bd9455be56508dd5a7b521e4942b\transformed\fragment-1.7.1\res
+com.example.quiz.app-jetified-window-1.2.0-14 C:\Users\HP\.gradle\caches\8.11.1\transforms\9bebcfe41c202e0563ecc02f02d94bc1\transformed\jetified-window-1.2.0\res
+com.example.quiz.app-jetified-core-ktx-1.13.1-15 C:\Users\HP\.gradle\caches\8.11.1\transforms\9cc118d9adb8f3fdf87fa2c44f5f9171\transformed\jetified-core-ktx-1.13.1\res
+com.example.quiz.app-core-1.13.1-16 C:\Users\HP\.gradle\caches\8.11.1\transforms\b926433e6514765e3fa1f482c8634747\transformed\core-1.13.1\res
+com.example.quiz.app-jetified-startup-runtime-1.1.1-17 C:\Users\HP\.gradle\caches\8.11.1\transforms\bbe75e98ff96bb27d2102a972d98cd9b\transformed\jetified-startup-runtime-1.1.1\res
+com.example.quiz.app-jetified-core-1.0.0-18 C:\Users\HP\.gradle\caches\8.11.1\transforms\bf40d81408ad531de94b3b0e11fb267f\transformed\jetified-core-1.0.0\res
+com.example.quiz.app-jetified-tracing-1.2.0-19 C:\Users\HP\.gradle\caches\8.11.1\transforms\ef62bff055817d01269d288680b1dc43\transformed\jetified-tracing-1.2.0\res
+com.example.quiz.app-debug-20 C:\project\quiz v2\android\app\src\debug\res
+com.example.quiz.app-main-21 C:\project\quiz v2\android\app\src\main\res
+com.example.quiz.app-pngs-22 C:\project\quiz v2\build\app\generated\res\pngs\debug
+com.example.quiz.app-resValues-23 C:\project\quiz v2\build\app\generated\res\resValues\debug
+com.example.quiz.app-packageDebugResources-24 C:\project\quiz v2\build\app\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.quiz.app-packageDebugResources-25 C:\project\quiz v2\build\app\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.quiz.app-debug-26 C:\project\quiz v2\build\app\intermediates\merged_res\debug\mergeDebugResources
+com.example.quiz.app-debug-27 C:\project\quiz v2\build\path_provider_android\intermediates\packaged_res\debug\packageDebugResources

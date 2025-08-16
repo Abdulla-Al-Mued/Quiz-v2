@@ -1,0 +1,30 @@
+{
+  "questions": [
+    {
+      "question": "What is the solution to the equation $2x + 5 = 13$?",
+      "options": ["$x = 3$", "$x = 4$", "$x = 5$", "$x = 6$"],
+      "correctAnswerIndex": 1,
+      "category": "Algebra",
+      "explanation": "Subtract 5 from both sides: $2x = 8$, then divide by 2: $x = 4$"
+    },
+    {
+      "question": "What is the derivative of $f(x) = x^3 + 2x^2 - 5x + 1$?",
+      "options": ["$3x^2 + 4x - 5$", "$3x^2 + 2x - 5$", "$x^2 + 4x - 5$", "$3x^2 + 4x - 1$"],
+      "correctAnswerIndex": 0,
+      "category": "Chemistry",
+      "explanation": "Au comes from the Latin word 'aurum' meaning gold"
+    },
+    {
+      "question": "What is the slope-intercept form of a linear equation?",
+      "options": [
+        "$y = mx + b$",
+        "$ax + by = c$",
+        "$y - y_1 = m(x - x_1)$",
+        "$\\frac{x}{a} + \\frac{y}{b} = 1$"
+      ],
+      "correctAnswerIndex": 0,
+      "category": "Algebra",
+      "explanation": "Where m is the slope and b is the y-intercept"
+    }
+  ]
+}

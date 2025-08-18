@@ -51,3 +51,19 @@ jobs:
         with:
           name: app-release
           path: build/app/outputs/flutter-apk/app-${{ env.VERSION }}.apk
+
+      - name: Create GitHub Release and upload APK
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
+          body: "Release APK version ${{ env.VERSION }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.QUIZ_TOKEN }}
+
+      - name: Upload APK to GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: build/app/outputs/flutter-apk/app-${{ env.VERSION }}.apk
+        env:
+          GITHUB_TOKEN: ${{ secrets.QUIZ_TOKEN }}

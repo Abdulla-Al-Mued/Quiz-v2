@@ -52,6 +52,20 @@ jobs:
           name: app-release
           path: build/app/outputs/flutter-apk/app-${{ env.VERSION }}.apk
 
+      - name: Create Git tag
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Check if tag already exists to avoid errors
+          if git rev-parse ${{ env.VERSION }} >/dev/null 2>&1; then
+            echo "Tag ${{ env.VERSION }} already exists, skipping tag creation."
+          else
+            git tag ${{ env.VERSION }}
+            git push origin ${{ env.VERSION }}
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.QUIZ_TOKEN }}
+
       - name: Create GitHub Release and upload APK
         uses: softprops/action-gh-release@v1
         with:

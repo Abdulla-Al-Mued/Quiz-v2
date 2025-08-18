@@ -42,17 +42,17 @@ jobs:
           VERSION=$(grep '^version:' pubspec.yaml | awk '{print $2}')
           echo "VERSION=$VERSION" >> $GITHUB_ENV
 
-      - name: Create Git tag
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          # Check if tag already exists to avoid errors
-          if git rev-parse ${{ env.VERSION }} >/dev/null 2>&1; then
-            echo "Tag ${{ env.VERSION }} already exists, skipping tag creation."
-          else
-            git tag ${{ env.VERSION }}
-            git push origin ${{ env.VERSION }}
-          fi
+#      - name: Create Git tag
+#        run: |
+#          git config user.name "github-actions[bot]"
+#          git config user.email "github-actions[bot]@users.noreply.github.com"
+#          # Check if tag already exists to avoid errors
+#          if git rev-parse ${{ env.VERSION }} >/dev/null 2>&1; then
+#            echo "Tag ${{ env.VERSION }} already exists, skipping tag creation."
+#          else
+#            git tag ${{ env.VERSION }}
+#            git push origin ${{ env.VERSION }}
+#          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

@@ -40,7 +40,7 @@ jobs:
         id: get_version
         run: |
           VERSION=$(grep '^version:' pubspec.yaml | awk '{print $2}')
-          echo "version=$VERSION" >> $GITHUB_ENV
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
 
       - name: Rename APK with version
         run: |
@@ -50,5 +50,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: app-release
-          path: build/app/outputs/flutter-apk/app-$VERSION.apk
-
+          path: build/app/outputs/flutter-apk/app-${{ env.VERSION }}.apk

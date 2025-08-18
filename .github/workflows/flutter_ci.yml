@@ -6,6 +6,9 @@ on:
     tags:
       - 'v*'
 
+permissions:
+  contents: write
+
 jobs:
   build:
     if: contains(github.event.head_commit.message, 'build:') || startsWith(github.ref, 'refs/tags/v')
@@ -46,6 +49,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch --tags
           # Check if tag already exists to avoid errors
           if git rev-parse ${{ env.VERSION }} >/dev/null 2>&1; then
             echo "Tag ${{ env.VERSION }} already exists, skipping tag creation."
@@ -54,7 +58,7 @@ jobs:
             git push origin ${{ env.VERSION }}
           fi
         env:
-          GITHUB_TOKEN: ${{ secrets.QUIZ_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Rename APK with version
         run: |

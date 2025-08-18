@@ -45,21 +45,6 @@ jobs:
           VERSION=$(grep '^version:' pubspec.yaml | awk '{print $2}')
           echo "VERSION=$VERSION" >> $GITHUB_ENV
 
-      - name: Create Git tag
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git fetch --tags
-          # Check if tag already exists to avoid errors
-          if git rev-parse ${{ env.VERSION }} >/dev/null 2>&1; then
-            echo "Tag ${{ env.VERSION }} already exists, skipping tag creation."
-          else
-            git tag ${{ env.VERSION }}
-            git push origin ${{ env.VERSION }}
-          fi
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Rename APK with version
         run: |
           cp build/app/outputs/flutter-apk/app-release.apk build/app/outputs/flutter-apk/app-$VERSION.apk
@@ -70,12 +55,44 @@ jobs:
           name: app-release
           path: build/app/outputs/flutter-apk/app-${{ env.VERSION }}.apk
 
-      - name: Create GitHub Release and upload APK
+      ##############################################
+      # OPTION A: Versioned Release (requires bump)
+      ##############################################
+
+#      - name: Create Git tag
+#        run: |
+#          git config user.name "github-actions[bot]"
+#          git config user.email "github-actions[bot]@users.noreply.github.com"
+#          git fetch --tags
+#          # Check if tag already exists to avoid errors
+#          if git rev-parse ${{ env.VERSION }} >/dev/null 2>&1; then
+#            echo "Tag ${{ env.VERSION }} already exists, skipping tag creation."
+#          else
+#            git tag ${{ env.VERSION }}
+#            git push origin ${{ env.VERSION }}
+#          fi
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#
+#      - name: Create GitHub Release and upload APK
+#        uses: softprops/action-gh-release@v1
+#        with:
+#          tag_name: ${{ env.VERSION }}
+#          name: Release ${{ env.VERSION }}
+#          body: "Release APK version ${{ env.VERSION }}"
+#          files: build/app/outputs/flutter-apk/app-${{ env.VERSION }}.apk
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.QUIZ_TOKEN }}
+
+      ##############################################
+      # OPTION B: Always update single "Latest" release
+      ##############################################
+      - name: Create/Update Latest Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ env.VERSION }}
-          name: Release ${{ env.VERSION }}
-          body: "Release APK version ${{ env.VERSION }}"
+          tag_name: latest
+          name: Latest Release
+          body: "This is always the latest build from main."
           files: build/app/outputs/flutter-apk/app-${{ env.VERSION }}.apk
         env:
-          GITHUB_TOKEN: ${{ secrets.QUIZ_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

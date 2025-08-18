@@ -42,16 +42,6 @@ jobs:
           VERSION=$(grep '^version:' pubspec.yaml | awk '{print $2}')
           echo "VERSION=$VERSION" >> $GITHUB_ENV
 
-      - name: Rename APK with version
-        run: |
-          cp build/app/outputs/flutter-apk/app-release.apk build/app/outputs/flutter-apk/app-$VERSION.apk
-
-      - name: Upload APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: app-release
-          path: build/app/outputs/flutter-apk/app-${{ env.VERSION }}.apk
-
       - name: Create Git tag
         run: |
           git config user.name "github-actions[bot]"
@@ -64,7 +54,17 @@ jobs:
             git push origin ${{ env.VERSION }}
           fi
         env:
-          GITHUB_TOKEN: ${{ secrets.QUIZ_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Rename APK with version
+        run: |
+          cp build/app/outputs/flutter-apk/app-release.apk build/app/outputs/flutter-apk/app-$VERSION.apk
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-release
+          path: build/app/outputs/flutter-apk/app-${{ env.VERSION }}.apk
 
       - name: Create GitHub Release and upload APK
         uses: softprops/action-gh-release@v1

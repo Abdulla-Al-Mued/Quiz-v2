@@ -76,12 +76,6 @@ jobs:
           tag_name: ${{ env.VERSION }}
           name: Release ${{ env.VERSION }}
           body: "Release APK version ${{ env.VERSION }}"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Upload APK to GitHub Release
-        uses: softprops/action-gh-release@v1
-        with:
           files: build/app/outputs/flutter-apk/app-${{ env.VERSION }}.apk
         env:
           GITHUB_TOKEN: ${{ secrets.QUIZ_TOKEN }}

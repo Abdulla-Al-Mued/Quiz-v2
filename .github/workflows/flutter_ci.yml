@@ -54,7 +54,7 @@ jobs:
             git push origin ${{ env.VERSION }}
           fi
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.QUIZ_TOKEN }}
 
       - name: Rename APK with version
         run: |

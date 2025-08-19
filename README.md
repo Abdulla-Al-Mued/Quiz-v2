@@ -58,4 +58,4 @@ answers
 ○ Sort by highest score first
 ○ Persistent storage (Hive)
 
-Everything Is implemented except ci/cd, unit test and night mode
+Everything Is implemented except night mode
